@@ -5,7 +5,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh 'git config --global --add safe.directory "/var/jenkins_home/workspace/Test_opencart"'
+                    sh 'git config --global --add safe.directory "/var/jenkins_home/workspace/Prostor_tests"'
                     sh 'pip config set global.trusted-host "pypi.org files.pythonhosted.org"'
                 }
             }
