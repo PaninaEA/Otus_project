@@ -11,7 +11,7 @@ pipeline {
        stage('Settings') {
             steps {
                 script {
-                    sh 'git config --global --add safe.directory /var/jenkins_home/workspace/Prostor_tests'
+                    sh 'git config --global --add safe.directory "/var/jenkins_home/workspace/Prostor_tests"'
                     sh 'playwright install chrome'
                     sh 'pip install --no-cache-dir -r requirements.txt'
                 }
