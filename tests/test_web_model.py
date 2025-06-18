@@ -27,7 +27,6 @@ def test_find_elements(page, site_url, usr_login):
 @allure.title("Import station model")
 def test_import_model_page(page, site_url, usr_login, model_path, get_model):
     ModelPage(page).open_model_page(site_url, usr_login)
-    print(model_path)
     ModelPage(page).model_page_import(model_path, get_model)
 
 
