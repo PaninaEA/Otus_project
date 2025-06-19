@@ -3,10 +3,6 @@ import allure
 from conftest import logins_pwd
 
 
-class TimeoutException:
-    pass
-
-
 class BasePage:
     def __init__(self, page):
         self.page = page
@@ -28,8 +24,4 @@ class BasePage:
         self.page.get_by_role("textbox", name="Пароль").fill(logins_pwd(login))
         self.page.get_by_role("button", name="Войти").click()
 
-    def check_element(self, locator):
-        try:
-            return self.page.locator(locator)
-        except TimeoutException:
-            return False
+ 
